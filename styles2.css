@@ -1,0 +1,153 @@
+/* Uuden Mediaplayerin tyylimäärittelyt 
+   14.09.2020 / ruottis 
+*/
+
+*, html{
+  padding: 0;
+  margin: 0;
+}
+
+ol li{
+	background-color: #f00;
+	color: #000;
+}
+
+.nowPlaying{
+	background-color: #fff;
+	color: #000;
+	font-weight: bold;
+}
+
+.title{
+	font-size: 32px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: green;
+	font-family: arial;
+}
+
+/* vanhan mediaPlayerin (styles.css) -tiedoston sisältö alla */
+#mediaplayer{
+  width: 500px;
+  height: 600px;
+  border: 4px solid #666; /* tummanharmaa 4px paksuinen reunaviiva */	
+}
+
+#toistoalue{
+  float: left;
+  clear: both; /* elementti varaa kaiken vaakasuuntaiset tilan */
+  width: 500px;
+  height: 500px;
+  background-color: #ccc; /* keskiharmaa taustaväri */
+  position: relative; /* isäntä-elementti, jolla voi olla lapsi-elementtejä */
+  overflow: hidden;
+}
+
+#toistoalue > *{
+  transition: all 1s linear; 
+}
+
+#toistoalue #biisilista{
+  position: absolute; /* määritetään asema suhteessa isäntä-elementtiin (#toistoalue) */
+  width: 500px;
+  height: 500px;
+  background-color: #000; 
+  color: #ccc;
+  text-shadow: 1px 1px 0px #fff;
+  font-family: 'Abel', sans-serif; 
+}
+
+#toistoalue #biisilista h1{
+  margin: 30px;
+}
+
+#toistoalue #biisilista ol{
+  margin-top: 20px; 
+  width: 480px;
+}
+
+#toistoalue #biisilista ol li{
+  list-style-type: decimal;
+  margin-left: 40px;	
+}
+
+#toistoalue #biisilista ol .soiva{
+  background-color: #fff;
+  color: #000;
+ // border-radius: 12px;
+  padding: 2px;
+}
+
+#toistoalue #levykansi{
+  position: absolute; /* määritetään asema suhteessa isäntä-elementtiin (#toistoalue) */
+  width: 500px;
+  height: 500px;
+  background-color: lightgreen; 
+  background-image: url(albumart.jpg);
+  background-size: 100% 100%;
+  text-align: center;
+  //line-height: 500px;
+  color: white;
+}
+
+#toistoalue #levykansi #biisi{
+  margin-top: 200px;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#toistoalue #video{
+  position: absolute; /* määritetään asema suhteessa isäntä-elementtiin (#toistoalue) */
+  width: 500px;
+  height: 500px;
+  background-color: black; 
+  text-align: center;
+}
+
+#toistoalue #video iframe{
+  
+}
+
+.paalla{
+  z-index: 1000;
+  opacity: 1;
+  top: 0;
+}
+
+.alla{
+  z-index: 1;
+  opacity: 0;
+  top: 1000px;
+}
+
+#kontrollit{
+  float: left;
+  clear: both; /* elementti varaa kaiken vaakasuuntaisent tilan */
+  width: 500px;
+  height: 50px;
+  background-color: #000; /* musta taustaväri */
+  text-align: center; /* sisäisten elementtien keskitys vaakasuunnassa */
+}
+
+/* määritetään kontrollit -alueen sisäiset input-elementit */
+#kontrollit input{
+  width: 96px;
+  height: 50px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+#tilavalinta input{
+  width: 164px;
+  height: 50px;
+}
+
+.on{
+  background-color: #000;
+  color: #fff;
+}
+
+.off{
+  background-color: #ccc;
+}
+

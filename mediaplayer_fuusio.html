@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<link rel="Stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="mediaplayer">
+
+<audio nocontrols id="audio">
+  <source src="biisi.mp3" type="audio/mpeg">
+</audio>
+
+	<div id="tilavalinta">
+		<input type="button" value="biisilista" onClick="nayta(this);" id="biisilista_btn" class="off" />
+		<input type="button" value="levykansi" onClick="nayta(this);" id="levykansi_btn" class="off" />
+		<input type="button" value="video" onClick="nayta(this);" id="video_btn" class="off" />
+	</div>
+
+	<div id="toistoalue">
+		<div id="biisilista" class="paalla">
+			<ol id="dynamicList">
+			
+			</ol>
+		</div>
+
+		<div id="levykansi" class="alla">
+			<p id="biisi">5. The Siege and Investiture of Baron von Frankenstein's Castle at Waisseria</p>
+		</div>
+	
+		<div id="video" class="alla">
+			<iframe id="youtube" auto width="525" height="394" src="https://www.youtube.com/embed/eTreqYGKKQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>					
+	</div>
+	
+	<div id="kontrollit">
+		<input type="button" value="previous" onClick="previous();generatePlaylist();" />
+		<input type="button" value="pause" onClick="pause();" />
+		<input type="button" value="play" onClick="soita();" />
+ 		<input type="button" value="shuffle" onClick="shuffle();generatePlaylist();" />
+		<input type="button" value="next" onClick="next();generatePlaylist();" />
+	</div>
+</div>
+
+<select onChange="changeStyle(this.value);">
+  <option value="styles.css">Tyylitiedosto 1</option>
+  <option value="styles2.css">Tyylitiedosto 2</option>
+</select>
+
+<script type="text/javascript" src="scripts_fuusio.js"></script>
+<script>
+testi();
+</script>
+
+</body>
+</html>
